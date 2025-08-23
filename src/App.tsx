@@ -5,7 +5,6 @@ import './styles/global.css'
 
 
 export function App (){
-    console.log('oi');
 
     return (
         <>
