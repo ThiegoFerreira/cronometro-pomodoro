@@ -7,6 +7,7 @@ import { Cycles } from './components/Cycles';
 import { DefaultButton } from './components/DefaultButton';
 import { Footer } from './components/Footer';
 import { Heading } from './components/Heading';
+import { useState } from 'react';
 
 import './styles/theme.css';
 import './styles/global.css';
@@ -14,16 +15,26 @@ import './styles/global.css';
 import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
 
 export function App() {
-  let numero = 0;
+  //Todos os componentes que usam número saibam das mudanças em seu valor.
+  //Sempre que eu usar o Hook useState, não vou usar atribuição diretamente
+  // const [numero, setNumero] = useState(() => {
+  //   console.log('lazy initialization');
+
+  //   return 0;
+  // }); //hook
+
+  const [numero, setNumero] = useState();
 
   function handleClick(){
-    const span = document.getElementById('numero');
+    setNumero(1);
 
-    if(!span) return;
+    // setNumero(prevState => prevState + 1);
 
-    numero +=1;
-    span.innerText = numero.toString();
-    console.log(numero, Date.now());
+    // const span = document.getElementById('numero');
+    // if(!span) return;
+    // numero +=1;
+    // span.innerText = numero.toString();
+    // console.log(numero, Date.now());
   }
 
   return (
