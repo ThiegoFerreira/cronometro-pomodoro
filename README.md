@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 # Pomodoro
-Projeto de cronômetro pomodoro  
+Projeto de cronômetro pomodoro para estudo de React, Typescript e Vite.
 =======
 # React + TypeScript + Vite
 
