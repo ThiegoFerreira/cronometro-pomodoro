@@ -1,34 +1,31 @@
-import { Home } from './pages/Home';
-import { useState } from 'react';
-import type { TaskStateModel } from './models/TaskStateModel';
-
 import './styles/theme.css';
 import './styles/global.css';
-
-
+import { useState } from 'react';
+import type { TaskStateModel } from './models/TaskStateModel';
+import { Home } from './pages/Home';
 
 // export type TaskStateModel = {
-//   tasks: TaskModel[];  //histórico, MainForm
-//   secondsRemaing: number;  // CountDown, Histórico, MainForm, Button
-//   formattedSecondsReaming: string;  //Título, CountDown
-//   activeTask: TaskModel | null;  // CountDown, Histórico MainForm, Button
-//   currentCycle: number;  // Home
+//   tasks: TaskModel[];
+//   secondsRemaining: number;
+//   formattedSecondsRemaining: string;
+//   activeTask: TaskModel | null;
+//   currentCycle: number; // 1 a 8
 //   config: {
-//     workTime: number;  //mainForm
-//     shortBreakTime: number;  //mainForm
-//     longBreakTime: number;  //mainForm
+//     workTime: number;
+//     shortBreakTime: number;
+//     longBreakTime: number;
 //   };
 // };
 
 const initialState: TaskStateModel = {
   tasks: [],
-  secondsRemaing: 0,
-  formattedSecondsReaming: '00:00',
+  secondsRemaining: 0,
+  formattedSecondsRemaining: '00:00',
   activeTask: null,
-  currentCycle:0,
-  config:{
-    workTime:25,
-    shortBreakTime:5,
+  currentCycle: 0,
+  config: {
+    workTime: 25,
+    shortBreakTime: 5,
     longBreakTime: 15,
   },
 };

@@ -3,11 +3,11 @@ import { Footer } from "../../components/Footer";
 import { Logo } from "../../components/Logo";
 import { Menu } from "../../components/Menu";
 
-type MainTeplateProps = {
+type MainTemplateProps = {
   children: React.ReactNode;
 };
 
-export function MainTeplate({ children }: MainTeplateProps) {
+export function MainTemplate({ children }: MainTemplateProps) {
   return (
     <>
       <Container>
